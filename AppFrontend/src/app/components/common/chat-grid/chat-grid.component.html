@@ -1,0 +1,22 @@
+<div class="chat-grid">
+  <div class="top-chat">
+    <img class="profile-image" src="assets/pictures/user.webp" alt="User Picture"/>
+    <div class="user-name-view">{{ this.selectedUserName }}</div>
+  </div>
+  <div class="body-chat">
+    <div class="message-view" *ngFor="let message of messages"
+         [ngStyle]="{'text-align': (message.sender === this.currentUserEmail) ? 'right' : 'left'}">
+      <div title="{{message.localDateTime}}" class="my-text">{{ message.content }}</div>
+      <div *ngIf="message.status === 'seen' && message.sender === this.currentUserEmail" class="display-message">
+        <i class="pi pi-eye"></i>
+      </div>
+    </div>
+  </div>
+  <div class="bottom-chat">
+    <input type="text" class="form-control" name="message" (keydown.enter)="this.sendMessage()"
+           (keydown)="this.isTyping()"
+           [(ngModel)]="this.newMessage"
+           id="input-message">
+    <i class="pi pi-send" (click)="this.sendMessage()" title="Send Message"></i>
+  </div>
+</div>

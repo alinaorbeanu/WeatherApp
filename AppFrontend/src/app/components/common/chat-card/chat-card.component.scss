@@ -1,0 +1,59 @@
+.card-view {
+  margin: 1rem;
+  height: 7rem;
+  border-radius: 0.5rem;
+  background-color: var(--border-color);
+
+    .card-components {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      .top-menu {
+        width: 100%;
+        display: flex;
+        color: var(--navbar-color);
+
+
+      .profile-image {
+        width: 20%;
+        display: flex;
+        margin: 1rem;
+        flex-direction: column;
+      }
+
+      .user-details {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+
+        .user-name-detail {
+          font-size: 1.7rem;
+          margin-bottom: 0.5rem;
+          font-weight: bolder;
+        }
+      }
+    }
+  }
+
+  .add-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .add-icon {
+    width: 15%;
+    display: flex;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    flex-direction: column;
+  }
+}
+
+.card-view:hover {
+  color: var(--white);
+  background-color: var(--dialog-background);
+  cursor: pointer;
+}

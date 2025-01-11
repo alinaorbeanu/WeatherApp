@@ -1,0 +1,12 @@
+<div class="notification-background" *ngIf="this.isDisabled">
+  <div class="notification-view">
+    <h4>Info</h4>
+    <p>Train process is done!</p>
+    <div class="button-view">
+      <button (click)="confirm()">Show Results</button>
+      <button (click)="cancel()">Exit</button>
+    </div>
+  </div>
+</div>
+<app-information-card *ngIf="this.isInformationCard" [prediction]="this.prediction" (closeWindow)="this.closeWindow()">
+</app-information-card>

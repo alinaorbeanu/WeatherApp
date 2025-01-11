@@ -1,0 +1,15 @@
+<div class="admin-page-view">
+  <div class="user-management-view">
+    <div class="card-box-view">
+      <div class="row">
+        <ng-container *ngFor="let item of users;  let i = index;">
+          <app-user-card [id]="item.id" [name]="item.name" [email]="item.email" [role]="item.roleDTO.name"
+                         [style.flex-basis.%]="25" class="card-size" (deleteUserEmitter)="this.deleteUser(item.id)">
+          </app-user-card>
+          <div *ngIf="(i + 1) % 4 === 0"></div>
+          <div class="row" *ngIf="(i + 1) % 4 === 0 && i !== users.length - 1"></div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>

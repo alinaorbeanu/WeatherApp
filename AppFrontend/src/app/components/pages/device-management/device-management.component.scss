@@ -1,0 +1,22 @@
+.admin-page-view {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+
+  .device-management-view {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    background-color: var(--background-color-box);
+    padding: 6rem 6rem 6rem 10rem;
+
+    .card-box-view {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: space-around;
+    }
+  }
+}

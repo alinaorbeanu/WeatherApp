@@ -1,0 +1,46 @@
+<div class="details-management-page"
+     [ngStyle]="{'height': this.isShowMoreArrowDown ? '100%': '100vh', 'position': !this.isShowMoreArrowDown ? 'absolute' : 'unset'}">
+  <div class="details-management-view">
+    <div class="details-top-menu">
+      <h5>Device's Address: {{ this.address }}</h5>
+      <div class="details-predicted-period">
+        <h5>Selected Forecast Start Day: {{ this.dateStartToShow }}</h5>
+        <h5>Selected Forecast End Day: {{ this.dateEndToShow }}</h5>
+        <div class="pi pi-calendar"
+             [ngStyle]="{'background-color' : this.isCalendarPressed ? 'var(--border-color)' : 'transparent',
+           'color' : this.isCalendarPressed ? 'var(--white)' : 'var(--black)'}"
+             (click)="this.handleCalendarOpening()">
+        </div>
+        <div *ngIf="this.isAdmin" class="pi pi-spinner" title="Train Algorithms" (click)="this.trainAlgorithms()"></div>
+      </div>
+    </div>
+    <div class="details-content-view">
+      <app-calendar-card [isCalendarPressed]="this.isCalendarPressed"
+                         (selectedDatesEmitted)="this.getSelectedDates($event)"></app-calendar-card>
+      <div *ngIf="this.wasAlgorithmsTrained && this.prediction">
+        <app-information-card (closeWindow)="this.closeInformationCard()"
+                              [prediction]="this.prediction"></app-information-card>
+      </div>
+      <app-spinner [isLoading]="this.isLoadingScreen"></app-spinner>
+      <div class="chart-container">
+        <canvas id="MyChart">{{ chart }}</canvas>
+      </div>
+    </div>
+    <div class="details-bottom-view">
+      <button *ngIf="this.isShowMore" class="pi pi-chevron-up" title="Show More Details"
+              (click)="this.displayShowMore()">Show More
+      </button>
+      <button *ngIf="this.isShowMoreArrowDown" class="pi pi-chevron-down" title="Show Less Details"
+              (click)="this.displayShowLess()">Show Less
+      </button>
+      <div class="details-canvas-view">
+        <div class="first-canvas">
+          <canvas id="MyDetailsChart">{{ detailsChart }}</canvas>
+        </div>
+        <div class="second-canvas">
+          <canvas id="MyDetailsMAPEChart">{{ detailsMAPEChart }}</canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<div *ngIf="this.isCalendarPressed" class="calendar-card-page">
+  <div class="calendar-card-view">
+    <label>Select forecast start time:</label>
+    <p-calendar [(ngModel)]="this.startDate"
+                [minDate]="minDate"
+                [maxDate]="maxDate"
+                [readonlyInput]="true"
+                dateFormat="dd-mm-yy"
+    ></p-calendar>
+    <label>Select forecast end time:</label>
+    <p-calendar [(ngModel)]="this.endDate"
+                [minDate]="minDate"
+                [maxDate]="maxDate"
+                [readonlyInput]="true"
+                dateFormat="dd-mm-yy"
+    ></p-calendar>
+    <div class="calendar-bottom-menu">
+      <button type="button" (click)="this.handlePredict()">Predict</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,65 @@
+.navbar {
+  background-color: var(--navbar-color);
+  color: var(--white);
+  padding: 0 1rem;
+  height: 3.5rem;
+  width: 100%;
+  font: 500 1.2rem/2rem Roboto, "Helvetica Neue", sans-serif;
+  transition: top 0.3s;
+  position: fixed;
+  z-index: 100;
+
+  .navbar-components {
+    display: flex;
+    margin-top: 0.5rem;
+    width: 100%;
+
+    .navbar-title {
+      margin-left: 47%;
+    }
+
+    .navbar-username {
+      margin-right: 1rem;
+    }
+
+    .navbar-links {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+    }
+
+    .pi-sign-out, .pi-inbox {
+      padding: 0.5rem 0.6rem;
+      cursor: pointer;
+    }
+
+    .chat-notification {
+      display: flex;
+      align-items: flex-start;
+
+      .pi-inbox {
+        font-size: 1.2rem;
+      }
+
+      .badge {
+        position: absolute;
+        background-color: red;
+        color: white;
+        border-radius: 50%;
+        padding: 0.2rem 0.4rem;
+        font-size: 0.8rem;
+      }
+    }
+
+    li:hover {
+      outline: none;
+      border: 0.1rem solid var(--navbar-color);
+      color: var(--white);
+      background-color: var(--navbar-color);
+    }
+  }
+}
+
+.pi {
+  font-size: 1.2rem;
+}

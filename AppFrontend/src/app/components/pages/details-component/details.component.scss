@@ -1,0 +1,90 @@
+.details-management-page {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  width: 100%;
+  overflow: hidden;
+
+  .details-management-view {
+    flex-grow: 1;
+    background-color: var(--background-color-box);
+    padding: 6rem 6rem 6rem 10rem;
+
+    .details-top-menu {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .details-predicted-period {
+        display: flex;
+        flex-direction: row;
+        margin-left: 0.3rem;
+      }
+    }
+
+    .details-content-view {
+      width: 100%;
+      border-top: 0.5rem solid var(--background-menu);
+    }
+
+    .details-bottom-view {
+      height: auto;
+      width: 100%;
+
+      .details-canvas-view {
+        display: flex;
+        flex-direction: row;
+
+        .first-canvas {
+          width: 50%;
+        }
+
+        .second-canvas {
+          width: 50%;
+          margin-left: 3rem;
+        }
+      }
+    }
+  }
+}
+
+h5 {
+  text-align: left;
+  margin-left: 1rem;
+}
+
+.pi {
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  padding: 0.2rem;
+}
+
+.pi-spinner {
+  margin-left: 0.2rem;
+}
+
+.pi-calendar:hover, .pi-spinner:hover {
+  cursor: pointer;
+}
+
+.chart-container {
+  width: 95%;
+}
+
+.pi-chevron-up, .pi-chevron-down {
+  top: 0;
+  bottom: 0;
+  position: relative;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  padding: 0;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}

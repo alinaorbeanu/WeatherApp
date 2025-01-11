@@ -1,0 +1,52 @@
+.card-view {
+  margin: 1rem;
+  align-items: center;
+  border-radius: 0.5rem;
+  background-color: var(--background-menu);
+  border-top: 0.3rem solid var(--background-shade);
+  border-bottom: 0.3rem solid var(--background-shade);
+
+  .top-menu {
+    display: flex;
+    margin: 0.2rem;
+    color: var(--navbar-color);
+    justify-content: space-between;
+  }
+
+  .card-components {
+    display: flex;
+    flex-direction: row;
+
+    .device-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 1rem;
+      padding: 1rem;
+    }
+
+    .device-details {
+      display: flex;
+      flex-direction: column;
+      margin: 0.5rem;
+
+      .device-description-detail {
+        font-size: 1.3rem;
+        font-weight: bolder;
+      }
+
+      .device-address-detail, .device-energy-detail {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+img {
+  display: flex;
+  width: 50%;
+}
+
+.pi-chart-line:hover {
+  cursor: pointer;
+}

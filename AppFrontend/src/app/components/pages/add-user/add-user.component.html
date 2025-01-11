@@ -1,0 +1,38 @@
+<div class="add-admin-functionality">
+  <div class="custom-background">
+    <div class="admin-view-left">
+      <img src="assets/pictures/user.webp" alt="User Picture"/>
+    </div>
+    <div class="admin-view-right" [formGroup]="userGroup">
+      <h1 class="add-title">Add New User</h1>
+      <div class="input-view">
+        <div class="form-admin">
+          <div class="the-same-line">
+            <label>Name:</label>
+            <input type="text" formControlName="name" placeholder="Enter a name">
+          </div>
+          <div class="the-same-line">
+            <label>Email:</label>
+            <input type="email" formControlName="email" placeholder="Enter an email">
+          </div>
+          <div class="the-same-line">
+            <label>Password:</label>
+            <input type="password" formControlName="password" placeholder="Enter a password">
+          </div>
+          <div class="the-same-line">
+            <label>Role:</label>
+            <select name="roles" id="roles" formControlName="role">
+              <option value="">--Please choose an option--</option>
+              <option value="ADMIN">ADMIN</option>
+              <option value="CLIENT">CLIENT</option>
+            </select>
+          </div>
+        </div>
+        <div class="actions-view">
+          <button [disabled]="!this.userGroup.valid" (click)="addUser()">Add User</button>
+          <button (click)="this.cancelEdit()">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+<div>
+  <app-navbar *ngIf="isLogin(true)" [title]="this.setPageTitle()" [showChat]="this.isLogin(false)"></app-navbar>
+  <app-side-navbar *ngIf="isLogin(false)" [isAdmin]="this.isUserAdmin()"></app-side-navbar>
+  <app-notification-train class="notification-train-view" [prediction]="this.predictions"
+                          [isDisabled]="this.isDisabled"></app-notification-train>
+  <router-outlet></router-outlet>
+</div>

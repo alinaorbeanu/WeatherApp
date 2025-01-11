@@ -1,0 +1,25 @@
+<div class="login-page-view">
+  <img src="assets/pictures/login_background.gif" class="login-page-left" alt="Background image">
+  <div class="login-page-right">
+    <div *ngIf="!this.isDisabled">
+      <form [formGroup]="loginForm" class="login-menu-view" (ngSubmit)="this.handleLoginUser()">
+        <h1>Login</h1>
+        <label for="username">Username</label>
+        <input formControlName='username' id="username" name="username" placeholder="Enter your username!" type="text"
+               required>
+        <label for="password">Password</label>
+        <input formControlName="password" type="password" id="password" name="password" required
+               placeholder="Enter your password!">
+
+        <button type="submit" [disabled]="!this.loginForm.valid"
+        >Login
+        </button>
+        <label>Need an account?</label>
+        <button type="button" (click)="this.navigateToRegister()">Register</button>
+      </form>
+    </div>
+    <div class="confirmation-dialog">
+      <app-confirmation-dialog [userRole]="userRole" (onConfirm)="selectOption($event)"></app-confirmation-dialog>
+    </div>
+  </div>
+</div>

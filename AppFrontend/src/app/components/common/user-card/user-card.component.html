@@ -1,0 +1,14 @@
+<div class="card-view">
+  <div class="top-menu">
+    <div class="pi pi-trash" title="Delete User" (click)="this.deleteUser()"></div>
+    <div class="pi pi-pencil" title="Edit User" (click)="this.redirectToEditUser()"></div>
+  </div>
+  <div class="profile-image">
+    <img src="assets/pictures/user.webp" alt="User Picture"/>
+  </div>
+  <div class="user-details">
+    <div class="user-name-detail"> Name: {{ this.name }}</div>
+    <div class="user-email-detail"> Email: {{ this.email }}</div>
+    <div class="user-role-detail"> Role: {{ this.role }}</div>
+  </div>
+</div>

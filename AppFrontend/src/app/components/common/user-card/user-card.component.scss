@@ -1,0 +1,50 @@
+.card-view {
+  margin: 1rem;
+  align-items: center;
+  border-radius: 0.5rem;
+  background-color: var(--background-menu);
+  border-top: 0.3rem solid var(--background-shade);
+  border-bottom: 0.3rem solid var(--background-shade);
+
+  .top-menu {
+    display: flex;
+    margin: 0.2rem;
+    color: var(--navbar-color);
+    justify-content: space-between;
+  }
+
+  .profile-image {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5rem;
+  }
+
+  .user-details {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem;
+
+    .user-name-detail {
+      font-size: 1.3rem;
+      font-weight: bolder;
+    }
+
+    .user-email-detail, .user-role-detail {
+      font-size: 1rem;
+    }
+  }
+}
+
+img {
+  display: flex;
+  width: 40%;
+}
+
+.pi-pencil:hover, .pi-trash:hover {
+  cursor: pointer;
+}

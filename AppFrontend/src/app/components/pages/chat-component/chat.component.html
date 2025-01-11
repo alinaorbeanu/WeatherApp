@@ -1,0 +1,20 @@
+<div class="chat-functionality">
+  <div class="custom-background">
+    <div class="chat-box-left">
+      <div class="open-chats">
+        <div *ngFor="let option of involvedUsers">
+          <app-chat-card (userSelected)="this.getSelectedUserById(option.id)"
+                         [messageWasSent]="this.messageWasSent"
+                         [userSelectedEmail]="option.email" [name]="option.name"></app-chat-card>
+        </div>
+        <app-chat-card *ngIf="this.isClient" [isCreateSession]="this.isClient"
+                       (isCreateSessionEmitter)="this.setCreateNewSession($event)"></app-chat-card>
+      </div>
+    </div>
+    <div class="border-space"></div>
+    <div *ngIf="this.isAnySessionSelected" class="chat-box-right">
+      <app-chat-grid style="height: 100%" [id]="this.selectedUserIdBroadcast"
+                     (messageWasSent)="this.setMessageWasSent($event)"></app-chat-grid>
+    </div>
+  </div>
+</div>

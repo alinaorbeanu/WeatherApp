@@ -1,0 +1,17 @@
+<div class="admin-page-view">
+  <div class="device-management-view">
+    <div class="card-box-view">
+      <div class="row">
+        <ng-container *ngFor="let item of devices;  let i = index;">
+          <app-device-card [id]="item.id" [description]="item.description" [address]="item.address"
+                           [deviceNumber]="item.deviceNumber"
+                           [maximumEnergyProduction]="item.maximumEnergyProduction" [owner]="item.owner"
+                           [style.flex-basis.%]="50">
+          </app-device-card>
+          <div *ngIf="(i + 1) % 2 === 0"></div>
+          <div class="row" *ngIf="(i + 1) % 2 === 0 && i !== devices.length - 1"></div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>

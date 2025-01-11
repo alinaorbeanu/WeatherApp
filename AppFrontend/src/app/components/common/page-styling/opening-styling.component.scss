@@ -1,0 +1,29 @@
+input, button {
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  border: var(--background-shade);
+  margin-bottom: 1rem;
+}
+
+input:focus {
+  outline: none;
+  border: 0.1rem solid var(--background-shade);
+}
+
+button {
+  font-size: 1.2rem;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: var(--button-hover);
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+label {
+  font-size: 1.2rem;
+}

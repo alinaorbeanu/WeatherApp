@@ -1,0 +1,20 @@
+<div class="card-view">
+  <div *ngIf="!this.isCreateSession" (click)="this.openChatFromBroadcast(this.id)">
+    <div class="card-components">
+      <div class="top-menu">
+        <div class="profile-image">
+          <img src="assets/pictures/user.webp" alt="User Picture"/>
+        </div>
+        <div class="user-details">
+          <div class="user-name-detail"> {{ this.name }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="this.isCreateSession" (click)="this.isCreateNewSessionPressed()" class="add-card">
+    <div class="add-icon">
+      <img src="assets/pictures/add.webp" alt="Add Icon"/>
+    </div>
+    <p>Create new session chat</p>
+  </div>
+</div>

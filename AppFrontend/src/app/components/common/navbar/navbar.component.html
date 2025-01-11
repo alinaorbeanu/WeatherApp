@@ -1,0 +1,13 @@
+<nav class="navbar">
+  <div class="navbar-components">
+    <div class="navbar-title">{{ this.title }}</div>
+    <ul class="navbar-links">
+      <div class="navbar-username">{{ this.userName }}</div>
+      <div class="chat-notification" *ngIf="this.showChat">
+        <li class="pi pi-inbox" (click)="openChat()"></li>
+        <div *ngIf="this.notificationCount >= 0" class="badge" title="Chat">{{ this.notificationCount }}</div>
+      </div>
+      <li class="pi pi-sign-out" (click)="this.logout()" title="Logout"></li>
+    </ul>
+  </div>
+</nav>

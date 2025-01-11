@@ -1,0 +1,18 @@
+<div class="card-view">
+  <div class="top-menu">
+    <div class="pi pi-chart-line" title="Production Info" (click)="this.showDetails()"></div>
+    <div *ngIf="this.isAdmin" class="pi pi-pencil" title="Edit Device" (click)="this.redirectToEditDevice()"></div>
+  </div>
+  <div class="card-components">
+    <div class="device-image">
+      <img src="assets/pictures/energy.png" alt="Energy Picture"/>
+    </div>
+    <div class="device-details">
+      <div class="device-description-detail"> Description: {{ this.description }}</div>
+      <div class="device-address-detail"> Address: {{ this.address }}</div>
+      <div class="device-address-detail"> Value: {{ this.deviceNumber }}</div>
+      <div class="device-energy-detail"> Power: {{ this.maximumEnergyProduction }} W</div>
+      <div *ngIf="this.isAdmin" class="device-owner-detail"> Owner: {{ this.owner }}</div>
+    </div>
+  </div>
+</div>

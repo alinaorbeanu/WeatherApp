@@ -1,0 +1,34 @@
+<div class="add-admin-functionality">
+  <div class="custom-background">
+    <div class="admin-view-left">
+      <img src="assets/pictures/energy.png" alt="Device Picture"/>
+    </div>
+    <div class="admin-view-right" [formGroup]="deviceGroup">
+      <h1 class="add-title">Add New Device</h1>
+      <div class="input-view">
+        <div class="form-admin">
+          <div class="the-same-line">
+            <label>Description:</label>
+            <input type="text" formControlName="description" placeholder="Enter a description">
+          </div>
+          <div class="the-same-line">
+            <label>Address:</label>
+            <input type="email" formControlName="address" placeholder="Enter an address">
+          </div>
+          <div class="the-same-line">
+            <label>Value:</label>
+            <input type="text" formControlName="deviceNumber" placeholder="Enter number of devices">
+          </div>
+          <div class="the-same-line">
+            <label>Energy:</label>
+            <input type="text" formControlName="maximumEnergyProduction" placeholder="Enter a energy production">
+          </div>
+        </div>
+        <div class="actions-view">
+          <button [disabled]="!this.deviceGroup.valid" (click)="addDevice()">Add Device</button>
+          <button (click)="this.cancelAdd()">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

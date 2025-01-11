@@ -1,0 +1,112 @@
+.add-admin-functionality {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+
+  .custom-background {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    background-color: var(--background-menu);
+    padding: 6rem 6rem 6rem 10rem;
+
+    .admin-view-left {
+      width: 40%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      .user-name-view {
+        font-size: 2rem;
+        margin-top: 2rem;
+      }
+    }
+
+    .admin-view-right {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 60%;
+      border-left: 0.1rem solid var(--border-color);
+      justify-content: center;
+      align-content: center;
+
+      .input-view {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .form-admin {
+          width: 60%;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+
+          .the-same-line {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: baseline;
+          }
+        }
+      }
+
+      .actions-view {
+        display: flex;
+        width: 60%;
+        justify-content: space-between;
+      }
+    }
+  }
+}
+
+img {
+  display: flex;
+  width: 50%;
+}
+
+input, button, select {
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+  border: var(--background-menu);
+  margin-bottom: 2.5rem;
+  padding-left: 0.5rem;
+  width: 80%;
+}
+
+input:focus {
+  outline: none;
+  border: 0.1rem solid var(--background-menu);
+}
+
+button {
+  width: 45% !important;
+  margin-top: 18%;
+}
+
+button:hover {
+  cursor: pointer;
+  color: var(--white);
+  background-color: var(--navbar-color);
+}
+
+h1 {
+  text-align: center;
+  align-content: center;
+  margin-bottom: 20%;
+  color: var(--navbar-color);
+  font-size: 2rem;
+}
+
+.add-title {
+  margin-bottom: 10% !important;
+}
+
+label {
+  width: 5rem !important;
+}

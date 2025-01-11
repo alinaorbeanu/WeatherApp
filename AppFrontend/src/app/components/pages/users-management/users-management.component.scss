@@ -1,0 +1,85 @@
+.admin-page-view {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+
+  .user-management-view {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    background-color: var(--background-color-box);
+    padding: 6rem 6rem 6rem 10rem;
+
+    .card-box-view {
+      display: flex;
+      flex-wrap: wrap;
+
+      .card-size {
+        width: 20%;
+      }
+    }
+
+    .user-functionalities {
+
+      display: flex;
+      flex-direction: row;
+
+      .user-vew-elements {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .user-view-edit {
+        display: flex;
+        flex-direction: column;
+        margin-left: 3rem;
+      }
+    }
+  }
+
+  .buttons-change-page {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.2rem 0;
+}
+
+th, td {
+  border: 0.1rem solid grey;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+th {
+  background-color: white;
+}
+
+.pi-inbox {
+  position: relative;
+  display: inline-block;
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.fa-bell {
+  font-size: 2rem;
+}
+
+.badge {
+  position: absolute;
+  top: -0.2rem;
+  right: -0.2rem;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 0.2rem 0.4rem;
+  font-size: 0.8rem;
+}

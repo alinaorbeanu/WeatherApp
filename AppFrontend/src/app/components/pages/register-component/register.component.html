@@ -1,0 +1,19 @@
+<div class="register-page-view">
+  <img src="assets/pictures/login_background.gif" class="register-page-left" alt="Background image">
+  <div class="register-page-right">
+    <h1>Register</h1>
+    <form [formGroup]="registerGroup" class="register-menu-view">
+      <label for="username">Name</label>
+      <input formControlName="name" required type="text" id="username" name="username" placeholder="Enter your name">
+
+      <label for="email">Email</label>
+      <input formControlName="email" required type="email" id="email" name="email" placeholder="Enter your email">
+
+      <label for="password">Password</label>
+      <input formControlName="password" required type="password" id="password" name="password"
+             placeholder="Enter your password">
+      <button type="submit" [disabled]="isButtonDisabled()" (click)="this.handleRegisterUser()">Create account
+      </button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+<div class="add-admin-functionality">
+  <div class="custom-background">
+    <div class="admin-view-left">
+      <img src="assets/pictures/energy.png" alt="Device Picture"/>
+      <div class="user-name-view">{{ this.currentDevice.description }}</div>
+    </div>
+    <div class="admin-view-right" [formGroup]="deviceGroup">
+      <h1 style="margin-bottom: 10%">Edit Device</h1>
+      <div class="input-view">
+        <div class="form-admin">
+          <div class="the-same-line">
+            <label>Description:</label>
+            <input type="text" formControlName="description" placeholder="Enter a description">
+          </div>
+          <div class="the-same-line">
+            <label>Address:</label>
+            <input type="email" formControlName="address" placeholder="Enter an address">
+          </div>
+          <div class="the-same-line">
+            <label>Value:</label>
+            <input type="text" formControlName="deviceNumber" placeholder="Enter number of devices">
+          </div>
+          <div class="the-same-line">
+            <label>Energy:</label>
+            <input type="text" formControlName="maximumEnergyProduction" placeholder="Enter a energy production">
+          </div>
+          <div class="the-same-line">
+            <label>Mapping</label>
+            <select name="roles" id="users" formControlName="userIdSelected">
+              <option value="0">-</option>
+              <option *ngFor="let option of users"
+                      [value]="option.id">
+                {{ option.email }}
+              </option>
+            </select>
+          </div>
+        </div>
+        <div class="actions-view">
+          <button [disabled]="!this.deviceGroup.valid" (click)="this.updateDevice()">Save</button>
+          <button (click)="this.cancelEdit()">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

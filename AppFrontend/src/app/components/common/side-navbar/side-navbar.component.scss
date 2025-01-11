@@ -1,0 +1,55 @@
+.side-navbar {
+  background-color: var(--navbar-color);
+  color: var(--white);
+  padding: 1rem 1rem;
+  height: 100%;
+  font: 500 1.2rem/2rem Roboto, "Helvetica Neue", sans-serif;
+  position: fixed;
+  z-index: 100;
+
+  .navbar-components {
+    cursor: pointer;
+    height: 90%;
+  }
+
+  .pi-bars {
+    color: var(--white);
+  }
+
+  .menu-icons {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 0 0;
+    margin: 0;
+    bottom: 1rem;
+    position: fixed;
+  }
+
+  .badge {
+    text-align: unset;
+    padding: 0;
+    font-size: 1.2rem;
+  }
+
+  .pi-sliders-v, .pi-user-plus, .pi-user, .pi-plus-circle {
+    display: flex;
+    padding-top: 2rem;
+  }
+}
+
+li {
+  list-style-type: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+p {
+  padding-left: 1rem;
+}

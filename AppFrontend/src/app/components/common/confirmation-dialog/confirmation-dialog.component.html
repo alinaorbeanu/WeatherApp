@@ -1,0 +1,10 @@
+<div class="notification-background" *ngIf="this.idDisabled()">
+  <div class="notification-view">
+    <h4>Confirmation</h4>
+    <p>{{ message }}</p>
+    <div class="button-view">
+      <button (click)="confirm()">Users Management</button>
+      <button (click)="cancel()">Devices Management</button>
+    </div>
+  </div>
+</div>

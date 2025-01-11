@@ -1,0 +1,31 @@
+<nav class="side-navbar" [ngStyle]="{ 'width': this.isOpened ? '14rem' : '4rem' }">
+  <div class="navbar-components">
+    <button class="pi pi-bars" (click)="this.displaySideMenu()"></button>
+    <ul class="menu-icons">
+      <div *ngIf="this.isAdmin; else isClient">
+        <li class="pi pi-user-plus" *ngIf="this.isUsersPage" title="Add User" (click)="this.pressAddUser()">
+          <p *ngIf="this.isOpened">Add User</p>
+        </li>
+        <li class="pi pi-plus-circle" *ngIf="this.isDevicePage && !this.isUsersPage" title="Add Device"
+            (click)="this.pressAddDevice()">
+          <p *ngIf="this.isOpened">Add Device</p>
+        </li>
+        <div *ngIf="this.isUsersPage; else isDevicePage">
+          <li class="pi pi-sliders-v" (click)="this.navigateToDevice()" title="Device Management">
+            <p *ngIf="this.isOpened">Device Management</p>
+          </li>
+        </div>
+        <ng-template #isDevicePage>
+          <li class="pi pi-user" (click)="this.navigateToUser()" title="Users Management">
+            <p *ngIf="this.isOpened">Users Management</p>
+          </li>
+        </ng-template>
+      </div>
+      <ng-template #isClient>
+        <li class="pi pi-sliders-v" (click)="this.navigateToMyDevice()" title="My Devices">
+          <p *ngIf="this.isOpened">My Devices</p>
+        </li>
+      </ng-template>
+    </ul>
+  </div>
+</nav>

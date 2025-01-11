@@ -1,0 +1,40 @@
+<div class="information-card-page">
+  <div class="information-card-view">
+    <div class="information-card-top-menu">
+      <h3>Training Algorithm Results</h3>
+      <button type="button" title="Close" (click)="this.close()">X</button>
+    </div>
+    <div class="information-card-details">
+      <table>
+        <thead>
+        <tr>
+          <th>Algorithm/Error</th>
+          <th>RMSE</th>
+          <th>MSE</th>
+          <th>MAPE %</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>Decision Tree</td>
+          <td>{{ this.prediction[0].rmse.toFixed(4) }}</td>
+          <td>{{ this.prediction[0].mse.toFixed(4) }}</td>
+          <td>{{ this.prediction[0].mape.toFixed(4) }}</td>
+        </tr>
+        <tr>
+          <td>Random Forest</td>
+          <td>{{ this.prediction[1].rmse.toFixed(4) }}</td>
+          <td>{{ this.prediction[1].mse.toFixed(4) }}</td>
+          <td>{{ this.prediction[1].mape.toFixed(4) }}</td>
+        </tr>
+        <tr>
+          <td>Multilayer Perceptron</td>
+          <td>{{ this.prediction[2].rmse.toFixed(4) }}</td>
+          <td>{{ this.prediction[2].mse.toFixed(4) }}</td>
+          <td>{{ this.prediction[2].mape.toFixed(4) }}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
